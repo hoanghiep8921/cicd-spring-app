@@ -15,7 +15,7 @@ public class CicdspringApplication {
 
     @RequestMapping("/hello")
     public String hello(){
-        return "Lô cc";
+        return "Lô con cù kỳ";
     }
 
 }
