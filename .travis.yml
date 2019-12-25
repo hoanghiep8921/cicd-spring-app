@@ -1,2 +1,20 @@
 language: java
-jdk: oraclejdk8
+jdk: 
+  - openjdk8
+dist: trusty
+# install:
+# - mvn -N io.takari:maven:wrapper
+# - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+before_install:
+  - chmod +x mvnw
+
+script: ./mvnw clean install
+
+deploy:
+  provider: heroku
+  api-key:
+    secure: 6c3080df-6e53-4f1f-a0fa-9ebcd8a36d35
+  app: testcicd-hiepdh
+
+# notifications:
+#   email: hoanghiep8921@gmail.com
