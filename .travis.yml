@@ -10,5 +10,11 @@ before_install:
 
 script: ./mvnw clean install
 
+deploy:
+  provider: heroku
+  api-key:
+    secure: 6c3080df-6e53-4f1f-a0fa-9ebcd8a36d35
+  app: testcicd-hiepdh
+
 # notifications:
 #   email: hoanghiep8921@gmail.com
